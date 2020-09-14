@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
+
 <body>
   <div id="app">
-    <el-button @click="visible = true">btnbtnbtn</el-button>
-    <el-dialog :visible.sync="visible" title="Hello world">
-      <p>123</p>
-    </el-dialog>
-    <el-table
-      :data="tableData"
-      style="width: 100%">
-      <el-table-column
-        prop="date"
-        label="日期"
-        width="180">
+    <el-table :data="tableData" style="width: 100%">
+      <el-table-column prop="date" label="日期" width="180">
       </el-table-column>
-      <el-table-column
-        prop="name"
-        label="姓名"
-        width="180">
+      <el-table-column prop="name" label="姓名" width="180">
       </el-table-column>
-      <el-table-column
-        prop="address"
-        label="地址">
+      <el-table-column prop="phonenum" label="手机号码" width="240">
+      </el-table-column>
+      <el-table-column prop="more" label="备注">
       </el-table-column>
     </el-table>
   </div>
 </body>
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      data: function() {
-        return { visible: false }
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: () => {
+      return {
+        tableData: [
+          {
+            date: '2016-05-03',
+            name: 'aaaa',
+            phonenum: '134713834',
+            more: '吧吧视擦平'
+          }, {
+            date: '2016-05-04',
+            name: '份饭',
+            phonenum: '1512412413',
+            more: '委29个'
+          }, {
+            date: '2016-05-05',
+            name: '会被好',
+            phonenum: '1251515324',
+            more: '亲剧情片播'
+          }, {
+            date: '2016-05-06',
+            name: '放',
+            phonenum: '63141734734',
+            more: '被你吴伟奇'
+          }
+        ]
       }
-    })
-  </script>
+    }
+  })
+</script>
+
 </html>
